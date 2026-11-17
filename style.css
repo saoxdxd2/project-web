@@ -1,0 +1,143 @@
+* { box-sizing: border-box; margin: 0; }
+button { font-family: inherit; font-size: inherit; }
+
+body { font-family: system-ui, sans-serif; background: #070c16; color: #f5f2e9; }
+.page { max-width: 1150px; margin: 0 auto; padding: 28px; }
+
+.point, .sur-titre, .mot-feuille, .score-toi { color: #3ee0c4; }
+.mot-ciseaux, .score-ordi { color: #ff6f5e; }
+.score-egalite, .pastille-serie { color: #ffc857; }
+.intro-texte, .entete-panneau span, .etiquette-score, .conseil, .regles, .etiquette-main, .nom-main, .sous-resultat, .pied, .vs {
+  color: #9aa6b8;
+  font-size: 13px;
+}
+
+.barre-haut, .actions, .marque, .intro, .entete-panneau, .arene-haut, .regles li, .pied, .arene {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.barre-haut { flex-wrap: wrap; }
+
+.marque-icone {
+  margin-right: 12px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #3ee0c4;
+  border-radius: 10px;
+}
+.marque-texte { font-size: 20px; font-weight: 800; }
+
+.etiquette, .bouton, .pastille {
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #f5f2e9;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 99px;
+}
+.bouton { margin-left: 12px; }
+
+.intro { margin: 24px 0; }
+.titre { font-size: 54px; font-weight: 800; line-height: 1; }
+.intro-texte { max-width: 320px; }
+
+.colonnes { display: flex; }
+.colonne-gauche { width: 360px; margin-right: 16px; }
+.colonne-droite { flex: 1; display: flex; flex-direction: column; }
+.panneau {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+}
+.colonne-gauche .panneau { margin-top: 16px; }
+.colonne-gauche .panneau:first-child { margin-top: 0; }
+.panneau-arene { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.entete-panneau h2 { font-size: 15px; }
+
+.ligne-scores, .choix-ligne { display: flex; justify-content: space-between; text-align: center; }
+.ligne-scores div { width: 32%; }
+.valeur-score { display: block; font-size: 36px; font-weight: 700; }
+
+.choix {
+  width: 32%;
+  padding: 16px 8px;
+  color: #f5f2e9;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+}
+.choix:hover { border-color: #f5f2e9; }
+.emoji-choix { display: block; font-size: 32px; margin-bottom: 6px; }
+.conseil { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.14); }
+
+.regles { list-style: none; padding: 0; margin-top: 10px; }
+.regles li { margin-top: 8px; }
+.regles li:first-child { margin-top: 0; }
+
+.pastille-serie { display: none; }
+.arene { margin: 16px 0; text-align: center; }
+.tuile {
+  width: 47%;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 3px solid #3ee0c4;
+  border-radius: 20px;
+}
+.tuile-ordi { border-bottom-color: #ff6f5e; }
+.vs { width: 6%; }
+.emoji-main { font-size: 88px; line-height: 1.2; }
+.emoji-main.inconnu { font-size: 54px; color: #9aa6b8; }
+.nom-main.connu { color: inherit; font-weight: 700; }
+
+.resultat {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left-width: 4px;
+  border-radius: 16px;
+}
+.titre-resultat { font-size: 24px; margin-bottom: 4px; }
+.resultat.gagne { border-left-color: #3ee0c4; color: #3ee0c4; }
+.resultat.perdu { border-left-color: #ff6f5e; color: #ff6f5e; }
+.resultat.egalite { border-left-color: #ffc857; color: #ffc857; }
+
+.pied { margin-top: 20px; }
+
+body.clair { background: #f4f2ea; color: #141a26; }
+body.clair .marque-icone { background: #f9f8f3; border-color: #0a7d66; }
+body.clair .etiquette, body.clair .bouton, body.clair .pastille, body.clair .choix, body.clair .tuile, body.clair .resultat {
+  color: #141a26;
+  background: #f9f8f3;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+body.clair .panneau { background: #ffffff; border-color: rgba(0, 0, 0, 0.15); }
+body.clair .choix:hover { border-color: #141a26; }
+body.clair .tuile { border-bottom-color: #0a7d66; }
+body.clair .tuile-ordi { border-bottom-color: #cf4a37; }
+body.clair .point, body.clair .sur-titre, body.clair .mot-feuille, body.clair .score-toi { color: #0a7d66; }
+body.clair .mot-ciseaux, body.clair .score-ordi { color: #cf4a37; }
+body.clair .score-egalite, body.clair .pastille-serie { color: #8f6500; }
+body.clair .intro-texte, body.clair .entete-panneau span, body.clair .etiquette-score, body.clair .conseil, body.clair .regles, body.clair .etiquette-main, body.clair .nom-main, body.clair .sous-resultat, body.clair .pied, body.clair .vs {
+  color: #5a6475;
+}
+body.clair .emoji-main.inconnu { color: #5a6475; }
+body.clair .nom-main.connu { color: inherit; }
+body.clair .resultat.gagne { border-left-color: #0a7d66; color: #0a7d66; }
+body.clair .resultat.perdu { border-left-color: #cf4a37; color: #cf4a37; }
+body.clair .resultat.egalite { border-left-color: #8f6500; color: #8f6500; }
+
+@media (max-width: 850px) {
+  .page { padding: 16px; }
+  .intro, .pied { flex-direction: column; align-items: flex-start; }
+  .intro-texte, .pied-droite { margin-top: 12px; }
+  .colonnes { display: block; }
+  .colonne-gauche { width: auto; margin-right: 0; }
+  .colonne-droite { display: block; }
+  .panneau-arene { margin-top: 16px; }
+  .bouton { padding: 12px 14px; }
+  .tuile { padding: 16px 8px; }
+  .emoji-main { font-size: 56px; }
+}

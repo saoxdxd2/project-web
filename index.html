@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pierre · Feuille · Ciseaux</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="barre-haut">
+      <div class="marque">
+        <span class="marque-icone">✊</span>
+        <span class="marque-texte">PFC<span class="point">.</span></span>
+      </div>
+      <div class="actions">
+        <span class="etiquette">Web 1 · S3 · Groupe 2</span>
+        <button class="bouton" id="boutonTheme">🌙 Sombre</button>
+        <button class="bouton" id="boutonReset">Recommencer</button>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="intro">
+        <div>
+          <p class="sur-titre">Duel classique · dans le navigateur</p>
+          <h1 class="titre">
+            <span>Pierre.</span>
+            <span class="mot-feuille">Feuille.</span>
+            <span class="mot-ciseaux">Ciseaux.</span>
+          </h1>
+        </div>
+        <p class="intro-texte">Choisis un coup, bats la machine et suis le score.</p>
+      </section>
+
+      <div class="colonnes">
+
+        <div class="colonne-gauche">
+
+          <section class="panneau">
+            <div class="ligne-scores">
+              <div>
+                <span class="etiquette-score">Toi</span>
+                <strong class="valeur-score score-toi" id="scoreToi">0</strong>
+              </div>
+              <div>
+                <span class="etiquette-score">Égalités</span>
+                <strong class="valeur-score score-egalite" id="scoreEgalite">0</strong>
+              </div>
+              <div>
+                <span class="etiquette-score">Ordinateur</span>
+                <strong class="valeur-score score-ordi" id="scoreOrdi">0</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="panneau">
+            <div class="entete-panneau">
+              <h2>Ton coup</h2>
+              <span>clique sur un bouton</span>
+            </div>
+            <div class="choix-ligne">
+              <button class="choix" id="pierre"><span class="emoji-choix">✊</span>Pierre</button>
+              <button class="choix" id="feuille"><span class="emoji-choix">✋</span>Feuille</button>
+              <button class="choix" id="ciseaux"><span class="emoji-choix">✌️</span>Ciseaux</button>
+            </div>
+            <p class="conseil">
+              Chaque manche compte, il n'y a pas de ligne d'arrivée. Clique sur
+              <strong>Recommencer</strong> pour remettre les compteurs à zéro.
+            </p>
+          </section>
+
+          <section class="panneau">
+            <div class="entete-panneau">
+              <h2>Les règles</h2>
+              <span>le trio classique</span>
+            </div>
+            <ul class="regles">
+              <li><span>✊ → ✌️</span><span>La pierre écrase les ciseaux</span></li>
+              <li><span>✌️ → ✋</span><span>Les ciseaux coupent la feuille</span></li>
+              <li><span>✋ → ✊</span><span>La feuille recouvre la pierre</span></li>
+            </ul>
+          </section>
+
+        </div>
+
+        <div class="colonne-droite">
+
+          <section class="panneau panneau-arene">
+
+            <div class="arene-haut">
+              <span class="pastille">Manche <b id="numeroManche">—</b></span>
+              <span class="pastille pastille-serie" id="serie">🔥 <b id="numeroSerie">0</b> d'affilée</span>
+            </div>
+
+            <div class="arene">
+              <div class="tuile">
+                <p class="etiquette-main">Toi</p>
+                <div class="emoji-main inconnu" id="mainToi">?</div>
+                <p class="nom-main" id="nomToi">En attente…</p>
+              </div>
+              <div class="vs">VS</div>
+              <div class="tuile tuile-ordi">
+                <p class="etiquette-main">Ordinateur</p>
+                <div class="emoji-main inconnu" id="mainOrdi">?</div>
+                <p class="nom-main" id="nomOrdi">En attente…</p>
+              </div>
+            </div>
+
+            <div class="resultat" id="resultat">
+              <p class="titre-resultat" id="titreResultat">À toi de jouer</p>
+              <p class="sous-resultat" id="sousResultat">La pierre écrase les ciseaux, les ciseaux coupent la feuille, la feuille recouvre la pierre.</p>
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="pied">
+      <span>Pierre · Feuille · Ciseaux</span>
+      <span class="pied-droite">Fait avec HTML, CSS et JavaScript</span>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
